@@ -1,0 +1,31 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasa Chat Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <div class="chat-container">
+        <h1>Chat with Rasa</h1>
+        <div class="chat-box">
+            <ul id="chat-log">
+                {% if result %}
+                {% for message in result %}
+                <li class="chat-message">{{ message }}</li>
+                {% endfor %}
+                {% endif %}
+            </ul>
+        </div>
+        <form action="/parse" method="post" class="chat-form">
+            <input type="text" id="value1" name="value1" placeholder="Type your message..." required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+
+</html>

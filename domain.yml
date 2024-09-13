@@ -1,0 +1,93 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_temperature
+  - no_location_weather
+  - tell_name
+  - say_thanks
+  - ask_weather
+
+entities:
+  - location
+  - GPE
+  - PERSON
+
+slots:
+  location:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: location
+
+  GPE:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: GPE
+
+  PERSON:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: PERSON
+
+  feedback:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: from_intent
+        intent: affirm
+        value: true
+      - type: from_intent
+        intent: deny
+        value: false
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you today?"
+
+  utter_iamabot:
+    - text: "I may not have feelings, but I can certainly help you with the weather! Ask me about the temperature in any city."
+
+  utter_did_that_help:
+    - text: "Did that answer your question?"
+
+  utter_happy:
+    - text: "I'm glad I could assist you! Do you have any more questions?"
+
+  utter_continue:
+    - text: "Great! Let's continue."
+
+  utter_say_feedback:
+    - text: "Sorry about that! I'm still learning. Feel free to send feedback so I can improve."
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day."
+
+  utter_default:
+    - text: "I'm having trouble understanding. Could you please rephrase your question?"
+
+  utter_cheer_up:
+    - text: "Why did the ice cream shiver? Because it was afraid it would melt! 😄"
+
+  utter_location:
+    - text: "Can you please tell me the city name you're asking about?"
+
+  utter_welcome:
+    - text: "You're very welcome!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_weather # Custom action for fetching weather
+  - action_greet_name # Custom action to greet with the user's name
+  - action_feedback # Custom action for handling feedback

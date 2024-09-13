@@ -1,0 +1,308 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - good afternoon
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+      - yes obviously
+      - yo
+      - yes for sure
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - nope
+      - not
+      - no way
+      - not really
+      - not much
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+      - I am well
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - not good
+      - not very good
+      - extremely sad
+      - so saad
+      - so sad
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+      - who are you?
+      - what can you do?
+      - tell me about you
+      - who made you
+      - how can you help me?
+      - I need your help
+      - what are you up to?
+      - your introduction?
+
+  - intent: ask_temperature
+    examples: |
+      - What is the temperature in [delhi](GPE)?
+      - Tell me the current temperature in [lucknow](GPE)?
+      - I want to know weather in [noida](GPE)?
+      - Today weather in [bangalore](GPE)?
+      - How hot it is in (delhi)[GPE] today?
+      - How cold in (bangalore)[GPE] ?
+      - at (London)[GPE]
+      - (Kolkata)[GPE]?
+      - I am going outside today, what is the temperature in [Berlin](GPE)?
+      - in [UK](GPE)?
+      - What the weather feels like in [goa](GPE)?
+      - about [japan](GPE)?
+      - What the air feels in [shimla](GPE)?
+      - [budapest](GPE)?
+      - temperature in [finland](GPE)
+      - Will the weather be fine in [mizoram](GPE)
+      - [saharanpur](GPE) temperature now
+
+  - intent: ask_weather
+    examples: |
+      - What is the weather in [New York](location)?
+      - Tell me the weather in [Los Angeles](location)
+      - How's the weather today in [Paris](location)?
+      - Can you give me the weather for [London](location)?
+      - What's the temperature in [Tokyo](location)?
+      - What is the weather in [Miami](location)?
+      - Tell me the weather in [Houston](location).
+      - How's the weather in [Chicago](location) today?
+      - What is the forecast for [Phoenix](location)?
+      - Can you give me the weather for [Philadelphia](location)?
+      - What’s the weather in [Denver](location)?
+      - What is the weather like in [Seattle](location)?
+      - How’s the weather today in [Boston](location)?
+      - What’s the current weather in [San Francisco](location)?
+      - Is it sunny in [Dallas](location)?
+      - What’s the weather in [Detroit](location) today?
+      - Tell me the forecast for [Orlando](location).
+      - Is it raining in [Nashville](location)?
+      - Will it snow in [Minneapolis](location)?
+      - What’s the weather like in [Las Vegas](location)?
+      - What is the weather today in [St. Louis](location)?
+      - Can you tell me the weather in [Kansas City](location)?
+      - What’s the forecast for [Portland](location)?
+      - Tell me the weather in [Indianapolis](location).
+      - How's the weather today in [New York](location)?
+      - What's the temperature in [Los Angeles](location)?
+      - How is the weather in [San Diego](location)?
+      - What's the forecast in [Atlanta](location)?
+      - Can you tell me the current weather in [Austin](location)?
+      - Is it hot in [Dallas](location) today?
+      - What's the weather for today in [Denver](location)?
+      - What's the air like in [Seattle](location)?
+      - Will it rain in [San Francisco](location)?
+      - What’s the weather in [Houston](location) now?
+      - Tell me the weather in [Miami](location) today.
+      - How warm is it in [Phoenix](location)?
+      - Is it chilly in [Boston](location)?
+      - What’s the temperature in [Philadelphia](location) today?
+      - Can you tell me the forecast for [Chicago](location)?
+      - Is it raining in [New York](location)?
+      - How's the temperature in [Orlando](location)?
+      - What's the weather in [Las Vegas](location)?
+      - Is it cold in [San Diego](location) today?
+      - Will it snow in [Denver](location)?
+      - What’s the current temperature in [Minneapolis](location)?
+      - Is it sunny in [Dallas](location) today?
+      - What’s the weather forecast for [Houston](location)?
+      - How hot is it in [San Francisco](location) today?
+      - Tell me the weather in [Austin](location)?
+      - How warm is it in [Phoenix](location) today?
+      - Will it rain in [Seattle](location)?
+      - Is it windy in [New York](location) today?
+      - What's the air quality in [Los Angeles](location)?
+      - What’s the forecast for [Portland](location)?
+      - How’s the weather in [Boston](location) right now?
+      - What’s the temperature in [Philadelphia](location) now?
+      - Is it foggy in [San Francisco](location)?
+      - Can you tell me if it's snowing in [Chicago](location)?
+      - What’s the air like in [Denver](location) today?
+      - How hot is it in [Austin](location) today?
+      - Will it be sunny in [Dallas](location) tomorrow?
+      - Tell me the weather in [Phoenix](location) today?
+      - Is it cloudy in [Los Angeles](location)?
+      - What’s the weather in [Houston](location) this weekend?
+      - How warm is it in [Miami](location)?
+      - Can you give me the temperature for [Las Vegas](location)?
+      - What’s the temperature in [Orlando](location) right now?
+      - Will it snow in [Minneapolis](location) this week?
+      - Is it raining in [New York](location) this afternoon?
+      - What’s the forecast for [Portland](location) tomorrow?
+      - What’s the current weather in [Boston](location)?
+      - Is it hot in [Austin](location)?
+      - Tell me the weather in [San Francisco](location) today?
+      - How cold is it in [Denver](location)?
+      - What’s the temperature in [Dallas](location)?
+      - Is it cloudy in [Chicago](location) today?
+      - Will it rain in [Philadelphia](location) this evening?
+      - Can you tell me the temperature in [Las Vegas](location) right now?
+      - What’s the forecast for [Miami](location) this week?
+      - How’s the weather in [New York](location)?
+      - What’s the air quality like in [Los Angeles](location)?
+      - What’s the current temperature in [Orlando](location)?
+      - Is it windy in [San Diego](location) today?
+      - Tell me the weather forecast for [Austin](location).
+      - What’s the temperature in [Phoenix](location)?
+      - Will it snow in [Denver](location) this weekend?
+      - How warm is it in [Las Vegas](location)?
+      - Can you give me the weather forecast for [Chicago](location)?
+      - What’s the current weather in [Miami](location)?
+      - Is it raining in [Houston](location)?
+      - What’s the weather in [New York](location) today?
+      - Will it be hot in [Los Angeles](location) tomorrow?
+      - Is it sunny in [San Francisco](location)?
+      - What’s the air like in [Philadelphia](location) today?
+      - How chilly is it in [Austin](location) right now?
+      - Tell me the forecast for [Dallas](location)?
+
+  - intent: no_location_weather
+    examples: |
+      - What is the weather now?
+      - Tell me the temperature today?
+      - Weather right now
+      - temperature at the moment
+      - Present weather
+      - Present temperature
+      - Can you show me temperature?
+      - is it sunny now?
+      - is the sky clear?
+      - will it rain today?
+
+  - intent: tell_name
+    examples: |
+      - My name is [Sara](PERSON)
+      - [Mohan](PERSON) here
+      - [Stancy](PERSON) this side
+      - I am [lucy](PERSON)
+      - Call me [Juliet](PERSON)
+      - My name is [Sam](PERSON)
+      - I am [Timothy](PERSON)
+      - Myself [Jim](PERSON)
+      - [dennis](PERSON) here
+      - My name is [John](PERSON)
+      - [Alice](PERSON) here
+      - [Michael](PERSON) this side
+      - I am [Sarah](PERSON)
+      - Call me [Emily](PERSON)
+      - My name is [David](PERSON)
+      - I am [James](PERSON)
+      - Myself [Emma](PERSON)
+      - [Sophia](PERSON) here
+      - I’m [Daniel](PERSON)
+      - [Olivia](PERSON) speaking
+      - [Liam](PERSON) this side
+      - My name is [Isabella](PERSON)
+      - I am [Mason](PERSON)
+      - Call me [Charlotte](PERSON)
+      - [Ethan](PERSON) here
+      - [Ava](PERSON) is my name
+      - I’m [Noah](PERSON)
+      - My name is [Lucas](PERSON)
+      - I am [Mia](PERSON)
+      - [Harper](PERSON) speaking
+      - Call me [Elijah](PERSON)
+      - I’m [Amelia](PERSON)
+      - [Benjamin](PERSON) here
+      - My name is [Ella](PERSON)
+      - I am [Oliver](PERSON)
+      - Call me [Henry](PERSON)
+      - [Scarlett](PERSON) this side
+      - My name is [William](PERSON)
+      - I’m [Sophie](PERSON)
+      - [Theodore](PERSON) speaking
+      - [Victoria](PERSON) here
+      - My name is [Jack](PERSON)
+      - I am [Grace](PERSON)
+      - Call me [Leo](PERSON)
+      - I’m [Lily](PERSON)
+      - [Sebastian](PERSON) this side
+      - My name is [Hannah](PERSON)
+      - [Matthew](PERSON) here
+      - I’m [Zoe](PERSON)
+      - Call me [Owen](PERSON)
+      - My name is [Chloe](PERSON)
+      - I am [Aiden](PERSON)
+      - Myself [Aria](PERSON)
+      - [Luke](PERSON) here
+      - Call me [Abigail](PERSON)
+      - I am [Isaac](PERSON)
+      - My name is [Natalie](PERSON)
+      - I’m [Carter](PERSON)
+      - Call me [Layla](PERSON)
+      - [Samuel](PERSON) speaking
+      - [Aurora](PERSON) here
+  - intent: say_thanks
+    examples: |
+      - Thanks a ton
+      - Thanks 
+      - very much thank you
+      - this was useful
+      - I appreciate your answers
+      - this is awesome, thanks
+      - Thank you

@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-GPE",
+      "2": "I-GPE",
+      "3": "L-GPE",
+      "4": "U-GPE",
+      "5": "B-PERSON",
+      "6": "I-PERSON",
+      "7": "L-PERSON",
+      "8": "U-PERSON",
+      "9": "B-location",
+      "10": "I-location",
+      "11": "L-location",
+      "12": "U-location",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-GPE": 1,
+      "I-GPE": 2,
+      "L-GPE": 3,
+      "U-GPE": 4,
+      "B-PERSON": 5,
+      "I-PERSON": 6,
+      "L-PERSON": 7,
+      "U-PERSON": 8,
+      "B-location": 9,
+      "I-location": 10,
+      "L-location": 11,
+      "U-location": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]
