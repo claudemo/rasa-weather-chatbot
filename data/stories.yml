@@ -8,6 +8,41 @@ stories:
       - action: utter_did_that_help
       - checkpoint: ask_feedback
 
+  - story: attending patient without washing hands
+    steps:
+      - intent: attend_patient
+      - slot_was_set:
+          - hands_washed: false
+      - action: action_remind_to_wash_hands
+
+  - story: attending patient after washing hands
+    steps:
+      - intent: attend_patient
+      - slot_was_set:
+          - hands_washed: true
+      - action: action_attend_patient
+
+  - story: washing hands and then attending patient
+    steps:
+      - intent: start_washing_hands
+      - action: action_wash_hands
+      - intent: attend_patient
+      - action: action_attend_patient
+  - story: nurse washes hands
+    steps:
+      - intent: start_washing_hands
+      - action: action_wash_hands
+      - slot_was_set:
+          - hands_washed: true
+      - intent: attend_patient
+      - action: action_attend_patient
+
+  - story: cannot attend patient if hands not washed
+    steps:
+      - intent: attend_patient
+      - slot_was_set:
+          - hands_washed: false
+      - action: action_remind_to_wash_hands
   - story: Ask for weather after greeting
     steps:
       - intent: greet

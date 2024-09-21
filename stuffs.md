@@ -134,3 +134,7 @@ Your default rasa server will start on http://localhost:5005, and rasa action se
 # weather API
 https://openweathermap.org/current
 
+
+# command cheatsheet
+https://rasa.com/docs/rasa/command-line-interface/
+    

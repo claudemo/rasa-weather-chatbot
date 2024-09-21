@@ -122,6 +122,88 @@ nlu:
       - Will the weather be fine in [mizoram](GPE)
       - [saharanpur](GPE) temperature now
 
+  - intent: attend_patient
+    examples: |
+      - I am ready to attend to the patient
+      - I want to see the patient now
+      - Can I attend to the patient now?
+      - I am going to check on the patient
+      - Time to attend to the patient
+      - I will now see the patient
+      - I want to attend to the patient
+      - Can I see the patient?
+      - Can I start with the patient now?
+      - I am ready to start attending to the patient
+
+  - intent: start_washing_hands
+    examples: |
+      - I am washing my hands
+      - I have washed my hands
+      - I just washed my hands
+      - I finished washing my hands
+      - I have already washed my hands
+      - I completed washing my hands
+      - My hands are washed
+      - I have cleaned my hands
+      - I am done with washing my hands
+      - Hands are clean now
+
+  - intent: attend_patient
+    examples: |
+      - I am ready to attend to the patient
+      - I want to see the patient now
+      - Can I attend to the patient now?
+      - I am going to check on the patient
+      - Time to attend to the patient
+      - I will now see the patient
+      - I want to attend to the patient
+      - Can I see the patient?
+      - Can I start with the patient now?
+      - I am ready to start attending to the patient
+
+  - intent: deny
+    examples: |
+      - No, I haven't washed my hands
+      - I didn't wash my hands
+      - I forgot to wash my hands
+      - My hands are not washed yet
+      - I haven’t cleaned my hands yet
+      - I have not washed my hands yet
+      - I haven't washed them yet
+      - No, I still need to wash my hands
+
+  - intent: affirm
+    examples: |
+      - Yes, I have
+      - Yes, my hands are clean
+      - Yes, I have washed my hands
+      - Of course, I did
+      - Yes, I am ready
+      - Yep, they are clean now
+      - Yes, I am all set
+  - intent: deny
+    examples: |
+      - No, I haven't washed my hands
+      - I didn't wash my hands
+      - I forgot to wash my hands
+      - My hands are not washed yet
+      - I haven’t cleaned my hands yet
+      - I have not washed my hands yet
+      - I haven't washed them yet
+      - No, I still need to wash my hands
+  - intent: start_washing_hands
+    examples: |
+      - I am washing my hands
+      - I have washed my hands
+      - I just washed my hands
+      - I finished washing my hands
+      - I have already washed my hands
+      - I completed washing my hands
+      - My hands are washed
+      - I have cleaned my hands
+      - I am done with washing my hands
+      - Hands are clean now
+
   - intent: ask_weather
     examples: |
       - What is the weather in [New York](location)?

@@ -3,7 +3,46 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import requests
+from rasa_sdk import Action
+from rasa_sdk.events import SlotSet
+class ActionRemindToWashHands(Action):
+    def name(self):
+        return "action_remind_to_wash_hands"
 
+    def run(self, dispatcher, tracker, domain):
+        # Remind the user to wash their hands
+        dispatcher.utter_message(text="You need to wash your hands before attending to the patient.")
+        return []
+class ActionWashHands(Action):
+    def name(self):
+        return "action_wash_hands"
+
+    def run(self, dispatcher, tracker, domain):
+        # Assume the nurse confirms hand washing
+        dispatcher.utter_message(text="Great! You have washed your hands.")
+        return [SlotSet("hands_washed", True)]  # Mark the task as done
+
+class ActionAttendPatient(Action):
+    def name(self):
+        return "action_attend_patient"
+
+    def run(self, dispatcher, tracker, domain):
+        # Check if hands have been washed before attending the patient
+        hands_washed = tracker.get_slot("hands_washed")
+        if hands_washed:
+            dispatcher.utter_message(text="You can now attend to the patient.")
+        else:
+            dispatcher.utter_message(text="Please wash your hands before attending the patient.")
+        return []
+
+class ActionRemindToWashHands(Action):
+    def name(self):
+        return "action_remind_to_wash_hands"
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_message(text="You need to wash your hands before attending to the patient.")
+        return []
+    
 class ActionWeather(Action):
 
     def name(self) -> Text:

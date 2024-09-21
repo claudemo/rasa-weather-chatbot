@@ -13,6 +13,8 @@ intents:
   - tell_name
   - say_thanks
   - ask_weather
+  - attend_patient
+  - start_washing_hands
 
 entities:
   - location
@@ -20,6 +22,17 @@ entities:
   - PERSON
 
 slots:
+  hands_washed:
+    type: bool
+    initial_value: false
+    mappings:
+      - type: from_intent
+        intent: affirm
+        value: true
+      - type: from_intent
+        intent: deny
+        value: false
+
   location:
     type: text
     mappings:
@@ -91,3 +104,7 @@ actions:
   - action_weather # Custom action for fetching weather
   - action_greet_name # Custom action to greet with the user's name
   - action_feedback # Custom action for handling feedback
+  - action_wash_hands
+  - action_attend_patient
+  - action_remind_to_wash_hands
+  - start_washing_hands
